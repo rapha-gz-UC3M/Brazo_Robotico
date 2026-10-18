@@ -1,0 +1,4 @@
+Servo Gripper Arm for SG90/ MG90s Servo motor by SuperbTech on Thingiverse: https://www.thingiverse.com/thing:5149951
+
+Summary:
+This is a 3D Printed Servo Gripper made using 3d printed parts and a MG90S Metal Gear Servo Motor. This gripper can pick objects and can be attached on a robotic arm for picking up objects. i have used a servo tester to test the movement of the gripper.Youtube Video: https://youtu.be/IalkWUN6wvEMy Channel: www.youtube.com/superbtechi designed the gripper in fusion 360. i have used M3 nuts and bolts. the nuts are 15mm in length and 3mm diameter. i have used standard M3 nuts. but it is preferred to use Nyloc lock nuts as the bolts can unscrew with continuous operation. i powered the servo tester with my DIY portable power supply
