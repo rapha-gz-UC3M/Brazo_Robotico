@@ -19,6 +19,10 @@ compradas (servo y tornillos), que está a tamaño real.
 | `original/` | STL de partida de la pinza |
 | `scripts/` | Código Python que genera todas las piezas y las comprobaciones |
 | `imagenes/` | Vistas del montaje |
+| `imprimir_brazo/` | **Todo el brazo listo para imprimir**: base, brazo y gripper en mm, orientados y con los cambios para imprimir ([lista y ajustes](imprimir_brazo/README.md)) |
+| `piezas_mm/` | Piezas de Vasil y de Ignacio pasadas de pulgadas a mm, sin ningún otro cambio |
+| `base_sup_imprimible/` | Versión imprimible de `BASE_TAPA_SUP` de Ignacio (cuerpo + pestaña pegada), en mm |
+| `shields_imprimibles/` | Versión imprimible de `Shield 1` y `Shield 2` de Vasil (placa + separadores sueltos), en mm |
 | `ensamblaje_completo/` | **Brazo entero** (base + brazo + gripper) en un STL, piezas colocadas e [informe de revisión](ensamblaje_completo/REVISION_ENSAMBLAJE.md) |
 
 ## Interfaz con el antebrazo de Vasil

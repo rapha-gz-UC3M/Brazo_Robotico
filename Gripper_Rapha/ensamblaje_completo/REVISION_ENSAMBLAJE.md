@@ -132,6 +132,35 @@ en cuenta los cables.
 7. **Repo.** `Brazo Parte 2.2_4.stl` es nuevo y aún no está en el repo, y `Brazo Parte 2.2_4.par` tiene cambios
    sin subir. Con esa versión la punta no cambia y el acople del gripper sigue encajando.
 
+## Revisión de escalas (21/10/2026)
+
+**Unidades**
+- Los 17 STL de `Arm_Vasil/Brazo_modificado_STL` y `Base_Ignacio` están en **pulgadas** (×25,4 al laminar).
+- Todo lo de `Gripper_Rapha` está en mm.
+
+**Escala ×1,5** (comparando con el BR3E original)
+
+| Piezas | Resultado |
+|---|---|
+| `Brazo Parte 1_1`, `1.1`, `2_1` y `2.2_4`, `Eje Parte 3`, `Sujetador de eje` | Exactamente ×1,5 ✔ |
+| `Eje Parte 1` y `Eje Parte 2` | Diámetros ×1,5. Son más largos que el original, que es lo esperado en la versión 2.0 con engranajes ✔ |
+| Paletas | Grosor y anchura ×1,5, y más altas en la versión 2.0 ✔ |
+| Corona y piñón | Ambos son de módulo 3 (= módulo 2 ×1,5; el nombre del archivo dice "modulo 2"). Engranan entre sí ✔ |
+| Base de Ignacio | Diseño nuevo, no es el original ×1,5. Encaja con las paletas ✔ |
+| Gripper | ×1,5 exacto; servo y M3 a tamaño real ✔ |
+
+**Cotas que van con piezas compradas y no deberían escalarse**
+
+| Dónde | Medida | Estado |
+|---|---|---|
+| `BASE_TAPA_INF`: soporte del motor de la base | 6 agujeros Ø3,6 en un círculo de Ø31, eje descentrado 7 mm, paso central Ø13 | ✔ Coincide con el JGB37-520 |
+| `Pieza_Eje_Giro_Base`: agujero en D | 6,15 × 5,65 mm | ✔ Eje en D del JGB37 (6 × 5,5) con 0,15 mm de holgura |
+| Piñón: agujero en D | 6,0 × 5,5 mm | ⚠ Sin holgura: entrará muy justo. Usar compensación de agujeros o repasar con broca de 6 |
+| `Eje Parte 2`: agujero del extremo, donde iría el motor del codo | Redondo de Ø6,0 (sin plano) con dos nervios pequeños, de 15 mm de profundidad | ✖ No está hecho para el eje en D del JGB37: el eje entraría a presión sobre los nervios y el plano no arrastra, así que el codo podría patinar. Debería ser un agujero en D de 6,15 × 5,65, como el de Ignacio |
+| Cuna del motor en `Shield 1` | Centro a 8,1 mm del eje del piñón | ⚠ El JGB37 tiene el eje a 7 mm (así lo tiene el soporte de Ignacio): hay 1,1 mm de diferencia |
+| `Shield 1` y `Shield 2` | No tienen los 6 agujeros M3 de la cara del JGB37 | ⚠ El motor solo quedaría apoyado en la cuna. Falta definir cómo se atornilla |
+| Agujeros de tornillos del brazo | Ø6 (orejetas de la placa B, paletas, Shields), Ø6,7 y Ø7,5 (`Shield 2` / `Parte 1.1`) | Son agujeros escalados de Ø4 y Ø5. Usar **M5** en los de Ø6 y **M6** (o M5 con arandela) en los de Ø6,7–7,5 |
+
 ## Lista de piezas del ensamblaje
 
 | Quién | Pieza | Cant. |

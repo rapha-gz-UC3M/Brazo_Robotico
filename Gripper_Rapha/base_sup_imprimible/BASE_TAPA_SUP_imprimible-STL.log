@@ -1,0 +1,26 @@
+STL translation to Solid Edge
+Fecha: miércoles,octubre 21,2026 08:03
+Archivo fuente:C:\Projects_UC3M\Brazo_Robotico\Gripper_Rapha\base_sup_imprimible\BASE_TAPA_SUP_imprimible.stl
+Autor: Desconocido
+Organización: Desconocido
+Sistema fuente: DEX
+
+Hardware:
+Procesador: 11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz
+Sistema operativo: Windows 10 Professional
+Memoria instalada: 15,73 GB
+
+Información sobre el software:
+Versión de Parasolid: 38.0.150
+Versión de PSBodyShop: 38.0.111
+Versión del adaptador STL: 1700.0.0
+Versión de Solid Edge: 226.00.01.004 x64
+
+STL Import Options
+Reparar fallos en la malla: Desactivado
+Crear operación base: Activado
+Habilitar registro de anotaciones: Activado
+
+Avance en la conversión:
+Se completó el proceso de conversión
+Tiempo necesario para convertir:00 : 00 : 01
