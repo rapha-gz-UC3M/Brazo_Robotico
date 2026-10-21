@@ -78,7 +78,7 @@ def main(items, out, asm_name):
 if __name__ == '__main__':
     C = sys.argv[1]; out = sys.argv[2]
     items = [
-        (f'{C}/REF_Brazo_Parte_2_1_Vasil.stl',  'REF_Brazo_Parte_2_1_Vasil', '#8e96a6'),
+        (f'{C}/REF_Brazo_Parte_2_1_Vasil.stl',  'Brazo_Parte_2_1_Vasil', '#8e96a6'),
         (f'{C}/ASM_acople_punta_vasil.stl',     'Acople_punta_vasil_x1.5',   '#b279a2'),
         (f'{C}/ASM_contraplaca_acople.stl',     'Contraplaca_acople_x1.5',   '#eeca3b'),
         (f'{C}/ASM_base_plate.stl',         'Gripper_base_plate_x1.5', '#c9ced6'),
@@ -90,4 +90,4 @@ if __name__ == '__main__':
         (f'{C}/ASM_jaw_right.stl',          'Gripper_jaw_right_x1.5',  '#3b7d35'),
         (f'{C}/ASM_servo_MG90S_aprox.stl',  'Servo_MG90S_referencia',  '#2b2b2b'),
     ]
-    main(items, out, 'Ensamblaje_Gripper_Antebrazo_Vasil_x1.5')
+    main(items, out, 'Ensamblaje_Gripper_Brazo_Vasil_x1.5')

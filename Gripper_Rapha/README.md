@@ -1,7 +1,7 @@
 # Gripper (Rapha) – pinza con servo MG90S, escala x1,5
 
 Pinza de mordazas paralelas accionada por un servo **MG90S**, fijada **sin grado de libertad** a la punta
-del antebrazo de Vasil (`Arm_Vasil/Brazo Parte 2_1.par`). **No modifica ninguna pieza de Vasil**: el acople
+del antebrazo de Vasil (`Arm_Vasil/Brazo_modificado/Brazo Parte 2_1.par`, la versión definitiva). **No modifica ninguna pieza de Vasil**: el acople
 abraza el extremo del antebrazo usando el agujero Ø15 y el avellanado Ø24 que ya tiene.
 Todo está a **escala x1,5**, salvo lo que encaja con piezas compradas (servo y tornillos), a tamaño real.
 
@@ -12,16 +12,17 @@ Todo está a **escala x1,5**, salvo lo que encaja con piezas compradas (servo y 
 | Carpeta | Contenido |
 |---|---|
 | `imprimir/` | STL listos para laminar, 1 unidad de cada |
-| `solid_edge/` | Ensamblaje STEP (zip) para abrir en Solid Edge: antebrazo de referencia + acople + gripper + servo |
+| `solid_edge/Ensamblaje_Gripper_Brazo_Vasil/` | Ensamblaje STEP para abrir en Solid Edge: antebrazo real de Vasil (de `Brazo_modificado_STL`) + acople + contraplaca + gripper + servo |
 | `comprobacion/` | Los mismos componentes en STL, colocados en las coordenadas del `.par` de Vasil |
-| `referencia/` | `Brazo_Parte_2_1_Vasil.stl`: copia de referencia del antebrazo de Vasil (solo para comprobar; **no se imprime**) |
+| `referencia/` | `Brazo_Parte_2_1_Vasil.stl`: el STL de Vasil pasado a mm, para comprobar (**no se imprime**; lo imprime Vasil) |
 | `original/` | STL de partida de la pinza |
 | `scripts/` | Código Python que genera todas las piezas y las comprobaciones |
 | `imagenes/` | Vistas del montaje |
 
 ## Interfaz con el brazo de Vasil
 
-Medida en `Arm_Vasil/Brazo Parte 2_1.par` (coordenadas del propio `.par`, en mm):
+Medida en `Arm_Vasil/Brazo_modificado_STL/Brazo Parte 2_1.stl` (= `Brazo_modificado/Brazo Parte 2_1.par`), en las coordenadas
+de la propia pieza, en mm. `scripts/forearm_ref.py` comprueba estas cotas cada vez que se regenera:
 
 - Antebrazo de 150 mm entre centros, placa de 30 mm de ancho y 7,5 mm de grosor (z de −27 a −19,5).
 - Punta en x = 150: agujero pasante **Ø15** y avellanado **Ø24 × 4,5 mm** por la cara del rebaje (z = −19,5).
@@ -87,9 +88,11 @@ python scripts/run_all.py            # rehace imprimir/ y comprobacion/ y pasa l
 python scripts/run_all.py --step     # además el STEP del ensamblaje (pip install cadquery-ocp)
 ```
 
-`run_all.py` lee la geometría del antebrazo directamente de `../Arm_Vasil/Brazo Parte 2_1.par`
-(solo lectura, de la malla de visualización que guarda Solid Edge); si Vasil cambia la punta de su pieza,
-basta con volver a ejecutarlo. Las cotas del acople están al principio de `scripts/build_mount_vasil.py`.
+`run_all.py` lee el antebrazo de `../Arm_Vasil/Brazo_modificado_STL/Brazo Parte 2_1.stl` (o, si no está, del `.par`
+de `Brazo_modificado`), solo lectura, y comprueba que la punta sigue igual; si Vasil la cambia, avisa.
+
+> Los STL de `Arm_Vasil/Brazo_modificado_STL` están exportados en **pulgadas** (opción por defecto de Solid Edge).
+> Los scripts lo detectan, pero **al laminarlos hay que escalarlos ×25,4** o reexportarlos en mm. Las cotas del acople están al principio de `scripts/build_mount_vasil.py`.
 
 ## Base de partida y licencias
 
