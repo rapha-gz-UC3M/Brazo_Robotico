@@ -79,8 +79,10 @@ if __name__ == '__main__':
     C = sys.argv[1]; out = sys.argv[2]
     items = [
         (f'{C}/REF_Brazo_Parte_2_1_Vasil.stl',  'Brazo_Parte_2_1_Vasil', '#8e96a6'),
+        (f'{C}/REF_Brazo_Parte_2.2_4_Vasil.stl', 'Brazo_Parte_2.2_4_Vasil', '#72b7b2'),
         (f'{C}/ASM_acople_punta_vasil.stl',     'Acople_punta_vasil_x1.5',   '#b279a2'),
         (f'{C}/ASM_contraplaca_acople.stl',     'Contraplaca_acople_x1.5',   '#eeca3b'),
+        (f'{C}/ASM_casquillo_punta.stl',        'Casquillo_punta_x1.5',      '#e45756'),
         (f'{C}/ASM_base_plate.stl',         'Gripper_base_plate_x1.5', '#c9ced6'),
         (f'{C}/ASM_gear_left.stl',          'Gripper_gear_left_x1.5',  '#4c78a8'),
         (f'{C}/ASM_gear_right.stl',         'Gripper_gear_right_x1.5', '#2f5d8a'),
