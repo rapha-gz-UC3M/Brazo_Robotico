@@ -51,6 +51,8 @@ shutil.copy(refs['B'], P('comprobacion', 'REF_Brazo_Parte_2.2_4_Vasil.stl'))
 
 run('check_montaje.py', MOUNT, refs['A'], refs['B'])   # debe acabar en "colisiones: 0"
 run('sweep.py', BUILD)                                  # apertura de 0° a 90° sin colisiones
+if os.path.exists(P('ensamblaje_completo', 'transformaciones.json')):
+    run('montar_ensamblaje.py')                         # brazo entero en ensamblaje_completo/
 if '--step' in sys.argv:
     run('stl_to_step_asm.py', P('comprobacion'), P('build', 'Ensamblaje_Gripper_Brazo_Vasil_x1.5.step'))
 print('\nListo: imprimir/ y comprobacion/ actualizados.')

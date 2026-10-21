@@ -19,6 +19,7 @@ compradas (servo y tornillos), que está a tamaño real.
 | `original/` | STL de partida de la pinza |
 | `scripts/` | Código Python que genera todas las piezas y las comprobaciones |
 | `imagenes/` | Vistas del montaje |
+| `ensamblaje_completo/` | **Brazo entero** (base + brazo + gripper) en un STL, piezas colocadas e [informe de revisión](ensamblaje_completo/REVISION_ENSAMBLAJE.md) |
 
 ## Interfaz con el antebrazo de Vasil
 
@@ -102,6 +103,7 @@ pasando por debajo de las orejetas. Por eso no puede haber nada entre las placas
 pip install trimesh manifold3d shapely scipy rtree olefile
 python scripts/run_all.py            # rehace imprimir/ y comprobacion/ y pasa las comprobaciones
 python scripts/run_all.py --step     # además el STEP del ensamblaje (pip install cadquery-ocp)
+python scripts/montar_ensamblaje.py --comprobar   # solo el brazo entero + interferencias
 ```
 
 `run_all.py` lee las dos placas de `../Arm_Vasil/Brazo_modificado_STL/` (o, si falta el STL, del `.par` de
