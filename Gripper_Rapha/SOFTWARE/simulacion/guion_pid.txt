@@ -1,0 +1,12 @@
+# Pruebas de ajuste: escalones, lazo abierto, autotune y deteccion de sentido
+0.5 HOME
+6.0 ESCALON 1 15 3000
+10.0 ESCALON 2 -20 3000
+14.0 ESCALON 0 30 3000
+18.0 PWM 1 -120 800
+20.0 AUTOTUNE 1 70
+52.0 AUTOTUNE 0 60
+84.0 SENTIDO 2
+85.0 CARGA 1
+87.0 PID
+88 FIN

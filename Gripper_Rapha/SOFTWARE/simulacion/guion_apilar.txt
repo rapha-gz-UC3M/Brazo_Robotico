@@ -1,0 +1,6 @@
+# Apilar 3 cubos de 40 mm: pila en (170,-130); cubos en (240,60), (200,-20), (150,140)
+0.2 CUBO 40
+0.5 HOME
+7.9 LOG 1
+8.0 APILAR 170 -130 240 60 200 -20 150 140
+120 FIN

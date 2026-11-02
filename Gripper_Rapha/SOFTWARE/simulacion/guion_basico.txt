@@ -1,0 +1,11 @@
+# Arranque, homing, movimientos articulares y cartesianos
+0.5 ESTADO
+1.0 HOME
+14.0 ESTADO
+14.5 J 30 20 90
+20.0 ESTADO
+20.5 P 220 0 60
+27.0 ESTADO
+27.5 P 180 -120 40
+34.0 ESTADO
+35 FIN

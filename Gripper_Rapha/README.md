@@ -15,6 +15,7 @@ modifican: aquí solo hay copias.
 | [`TORNILLERIA.md`](TORNILLERIA.md) | Lista de compra de tornillos y dónde va cada uno |
 | [`ENSAMBLAJE/`](ENSAMBLAJE/README.md) | El brazo entero montado (STL para Solid Edge), los motores, qué se ha cambiado respecto a las piezas originales y las comprobaciones |
 | [`GRIPPER/`](GRIPPER/README.md) | Diseño de la pinza: acople a la punta del antebrazo, Solid Edge, comprobaciones y pinza original |
+| [`SOFTWARE/`](SOFTWARE/README.md) | **Programa del Arduino** (control PID de las 3 articulaciones, homing, seguridad, apilar cubos) y herramientas de PC: interfaz gráfica, registro de ensayos y ajuste del PID para el informe, y un simulador |
 | [`scripts/`](scripts/README.md) | Código que genera todo lo anterior (`python scripts/generar_todo.py`) |
 
 La guía de montaje paso a paso (con la electrónica) está en el documento compartido del equipo.
