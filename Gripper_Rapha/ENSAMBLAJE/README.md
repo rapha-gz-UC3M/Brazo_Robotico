@@ -15,6 +15,7 @@ carpetas: lo que se ha cambiado son copias que están aquí.
 | `piezas_colocadas/` | Cada pieza por separado y ya colocada, por si se quieren importar una a una |
 | `transformaciones.json` | Dónde va cada pieza: matriz 4×4 desde su STL de origen |
 | `imagenes/` | Vistas del brazo |
+| [`explosionados/`](explosionados/Explosionados_brazo_robotico.pdf) | **Vistas explosionadas** de cada subconjunto (base, pinza, antebrazo, brazo, codo, hombro y el brazo entero), con cada pieza numerada y sus tornillos. Todas juntas en `Explosionados_brazo_robotico.pdf` |
 
 Marco: origen en el eje de giro de la base, a la altura del escalón de `BASE_TAPA_INF`; Y hacia arriba; X es la
 dirección de los ejes del hombro y del codo. Pose: la del brazo BR3E original (brazo inclinado 19° hacia delante,
