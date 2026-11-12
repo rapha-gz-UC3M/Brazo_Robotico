@@ -53,7 +53,7 @@ Los pines están en `config.h` y coinciden con la tabla de la guía de montaje.
 |---|---|---|
 | Encoder base canal A / B | D2 / D4 | D2 es la interrupción INT0. Alimentación del encoder a 5 V |
 | Final de carrera 1 / 2 | D3 / D10 | Entre el pin y GND (pull-up interno, pulsado = LOW). FC1 es el del lado **horario** visto desde arriba |
-| Servo pinza (señal) | D9 | Alimentación del servo con el **buck a 5 V**, GND común con el Arduino |
+| Servo pinza (señal) | D9 | Alimentación del servo a 5 V (salida de 5 V del L298N o pin 5 V del Arduino) con un **condensador de 470 µF** junto al conector. GND común |
 | Pot hombro / pot codo (cursor) | A0 / A1 | Extremos del pot a 5 V y GND |
 | Motor base: PWM, IN1, IN2 | D5, D7, D8 | |
 | Motor hombro: PWM, IN1, IN2 | D6, D12, D13 | |
@@ -64,7 +64,9 @@ Los pines están en `config.h` y coinciden con la tabla de la guía de montaje.
 - `MODO_EN_IN1_IN2` (por defecto): L298N, TB6612FNG… El PWM va a EN/ENA/PWMA y el sentido a IN1/IN2.
 - `MODO_PWM_DIR`: Pololu Dual G2, Cytron MD10C, VNH5019… El PWM va a PWM y el sentido a DIR. IN2 no se usa.
 
-Todas las masas (12 V de los motores, buck del servo y Arduino) tienen que ir unidas.
+Todas las masas (12 V de los motores, servo y Arduino) tienen que ir unidas. Entre +12 V y masa, cerca de los
+controladores, va un condensador electrolítico de 470–1000 µF (≥ 25 V) para los picos de corriente de los motores.
+Si el Arduino se reinicia al cerrar la pinza, el servo está pidiendo más corriente de la que dan los 5 V.
 
 ## 3. Puesta en marcha (una vez, con el brazo montado)
 

@@ -15,6 +15,7 @@ modifican: aquí solo hay copias.
 | [`TORNILLERIA.md`](TORNILLERIA.md) | Lista de compra de tornillos y dónde va cada uno |
 | [`ENSAMBLAJE/`](ENSAMBLAJE/README.md) | El brazo entero montado (STL para Solid Edge), los motores, qué se ha cambiado respecto a las piezas originales y las comprobaciones |
 | [`GRIPPER/`](GRIPPER/README.md) | Diseño de la pinza: acople a la punta del antebrazo, Solid Edge, comprobaciones y pinza original |
+| [`CABLEADO/`](CABLEADO/README.md) | **Guía de cableado**: esquemas, alimentación, controladores, sensores, servo, tabla de pines, montaje sobre la tabla de aglomerado y comprobaciones |
 | [`SOFTWARE/`](SOFTWARE/README.md) | **Programa del Arduino** (control PID de las 3 articulaciones, homing, seguridad, apilar cubos) y herramientas de PC: interfaz gráfica, registro de ensayos y ajuste del PID para el informe, y un simulador |
 | [`scripts/`](scripts/README.md) | Código que genera todo lo anterior (`python scripts/generar_todo.py`) |
 
@@ -23,9 +24,11 @@ La guía de montaje paso a paso (con la electrónica) está en el documento comp
 ## Resumen del brazo
 
 - **Base:** motor directo a `Pieza_Eje_Giro_Base`, que va atornillada a `BASE_TAPA_SUP` para que no vuelque.
-  Debajo lleva un suplemento de 15 mm para el encoder del motor.
+  Debajo lleva un suplemento de 15 mm para el encoder del motor. La base y el suplemento se atornillan a una
+  **tabla de aglomerado** con 4 tirafondos (ver [`TORNILLERIA.md`](TORNILLERIA.md)): así el brazo no vuelca, y en
+  la misma tabla van el Arduino, los controladores y el cableado.
 - **Hombro y codo:** cada uno con un motor atornillado a su shield, un piñón de 10 y una corona de 30 dientes
   (3:1) y un potenciómetro en el eje.
-- **Pinza:** servo MG90S a 5 V (con convertidor buck, no desde el Arduino).
+- **Pinza:** servo MG90S a 5 V, con un condensador de 470 µF junto al conector (sin convertidor aparte).
 - **Con los motores de 45 RPM**, el hombro va justo de par: sostiene el brazo cerca de la vertical, pero no estirado
   en horizontal. Detalles y soluciones en [`ENSAMBLAJE/README.md`](ENSAMBLAJE/README.md#los-motores-jgb37-520b-12-v-45-rpm-con-encoder).

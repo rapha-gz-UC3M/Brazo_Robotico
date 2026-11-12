@@ -65,8 +65,8 @@ por debajo de las orejetas. Por eso no puede haber nada entre las placas cerca d
 - Las mordazas acaban ~160 mm más allá del eje de la punta del antebrazo.
 - Peso: gripper + acople, casquillo y contraplaca ~90–100 g en PLA (40 % de relleno) + servo 13,4 g + tornillería
   ~20 g. Es lo que tiene que sostener el motor del codo.
-- El servo se alimenta a 5 V con un convertidor buck de 2–3 A, no desde el pin de 5 V del Arduino (masa común con el
-  Arduino).
+- El servo se alimenta a 5 V sin convertidor aparte (decisión de la tutoría): de la salida de 5 V del controlador
+  L298N o del pin de 5 V del Arduino, con un condensador de 470 µF junto al conector y masa común.
 
 ## Pendiente de confirmar al montar
 

@@ -27,7 +27,8 @@ el codo para que ninguna cabeza ni tuerca choque. Todo es métrico; "cabeza Alle
 | M5 × 40 cabeza Allen | 1 | 1 tuerca M5 + 1 arandela | Eje de la punta |
 | M6 × 30 cabeza Allen | 1 | 1 tuerca M6 + 1 arandela | `Shield 2` → `Brazo Parte 1.1` |
 | Bridas (zip ties) de 3–4 mm | 2 | — | Potenciómetros |
-| *Opcional:* tirafondo Ø4 × 40 (o M4 × 40 + tuerca) | 4 | — | Fijar la base a un tablero, a través del suplemento |
+| Tirafondo para aglomerado Ø4 × 35 (tabla de 16 mm) o Ø4 × 40 (tabla de 19 mm o más) | 4 | 4 arandelas M4 | Base → tabla de aglomerado, a través del suplemento |
+| Tirafondo Ø3 × 12 (o separadores adhesivos) | 8–12 | — | Arduino y controladores → tabla |
 
 Además: los tornillos que vienen con el servo MG90S y con los finales de carrera.
 
@@ -41,7 +42,7 @@ Además: los tornillos que vienen con el servo MG90S y con los finales de carrer
 | `Pieza_Eje_Giro_Base` → eje del motor | 1 prisionero M3 × 6 | En el agujero del lateral, contra el plano de la D del eje |
 | `BASE_TAPA_SUP` → `Pieza_Eje_Giro_Base` | 1 × M3 × 12 | Desde arriba, por el agujero central del disco (cabeza rebajada). Une la tapa al eje: así no vuelca. Sin forzar |
 | `BASE_TAPA_SUP` sobre `BASE_TAPA_INF` | — | Apoya y gira |
-| `Base_suplemento_15mm` bajo `BASE_TAPA_INF` | — / 4 tirafondos | Pegado, o atornillado al tablero a través de las 4 orejetas de la base y del suplemento |
+| `BASE_TAPA_INF` + `Base_suplemento_15mm` → tabla de aglomerado | 4 tirafondos Ø4 + arandela | Por las 4 orejetas de la base (agujeros de 4,7 mm) y los 4 agujeros del suplemento: 25 mm de plástico. Ø4 × 35 entra 10 mm en la tabla y no asoma en una de 16 mm; Ø4 × 40 entra 15 mm, para tablas de 19 mm o más. Alternativa: 4 × M4 pasantes con arandela y tuerca por debajo (25 mm + grosor de la tabla + 8 mm). Los cables del motor salen por la salida de cables del suplemento |
 
 ### Hombro
 | Unión | Tornillos | Notas |
